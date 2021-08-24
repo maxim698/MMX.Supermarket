@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace MMX.Supermarket
 {
-    class Bascet : IShoping
+    interface IWarehouse
     {
-        public void Buy()
-        {
-            
-        }
+        public void PrintInfo<T>(T products) where T : IShoping;
+        
     }
 }

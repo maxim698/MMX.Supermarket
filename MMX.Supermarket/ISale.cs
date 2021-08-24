@@ -8,6 +8,6 @@ namespace MMX.Supermarket
 {
     interface ISale
     {
-        bool IsDayOfWeek(DateTime dateTime, DayOfWeek dayOfWeek);
+        DayOfWeek DayOfWeek { get; set; }
     }
 }

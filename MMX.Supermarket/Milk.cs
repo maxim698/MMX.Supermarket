@@ -6,35 +6,21 @@ using System.Threading.Tasks;
 
 namespace MMX.Supermarket
 {
-    class Milk:Products,ISale
+    class Milk : Products, IShoping, ISale
     {
+        public Milk()
+        {
+        }
 
-        public override string Name => "Простаквашино";
+        public override int Energy { get; set; } = 90;
 
-        public override int Energy => 20;
-
-        public override decimal Price => 50.00m;
+        public override decimal Price { get; set; } =50.00m;
 
         public override double Weight => 1.0;
 
-        public override int Count { get; set; } = 100;
-
-        public override void Buy()
-        {
-            Console.WriteLine("Товар перенесен в корзину");
-            Count--;  
-        }
-        public bool IsDayOfWeek(DateTime dateTime, DayOfWeek dayOfWeek)
-        {
-            return dateTime.DayOfWeek == dayOfWeek;
-        }
-        public override decimal Sale()
-        {
-            if (IsDayOfWeek(DateTime.Now,DayOfWeek.Saturday))
-            {
-                return Price / 2;
-            }
-            return Price;
-        }
+        public override uint Count { get; set; } = 100;
+        public override string Name { get; set; } = "Простаквашино";
+        public override DayOfWeek DayOfWeek { get; set; } = DayOfWeek.Thursday;
+        public override uint CountIsByu { get ; set; }
     }
 }

@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace MMX.Supermarket
 {
-    interface IMarket
+    class MyExcention : Exception
     {
+        public MyExcention():base("Ошибка!Не правильный ввод данных")
+        {
+        }
 
+        
     }
 }

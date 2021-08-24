@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace MMX.Supermarket
 {
-    interface IShoping
+    interface IShoping:ISale
     {
-        void Buy();
-        
+        public  uint CountIsByu { get; set; }
+        public decimal Price { get; set; }
+
+        public string Name { get;  set; }
+
+        public uint Count { get; set; }
     }
 }

@@ -6,11 +6,21 @@ namespace MMX.Supermarket
     {
         static void Main(string[] args)
         {
-            var Buyer1 = new Buyer { Cash = 150.00m };
-            Buyer1.Buy(new Milk());
-            Buyer1.Buy(new Shampoo());
-            Buyer1.PrintCash();
+            var buyer = new Buyer(1000.0m);
+            var milk = new Milk();
+            var shampoo = new Shampoo();
+            var ware = new Warehouse();
 
+            buyer.Buy(milk, 3);
+            buyer.Buy(shampoo, 3);
+            buyer.PrintCash();
+            ware.PrintInfo(milk);
+            ware.PrintInfo(shampoo);
+            
+
+           
+            
+            
         }
     }
 }

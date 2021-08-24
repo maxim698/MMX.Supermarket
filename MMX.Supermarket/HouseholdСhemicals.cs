@@ -8,16 +8,15 @@ namespace MMX.Supermarket
 {
     abstract class HouseholdChemicals : IShoping
     {
-        
-        public abstract int Count { get; set; }
-        public abstract string Name { get; }
-        public abstract decimal Price { get; }
+        public HouseholdChemicals()
+        {
+
+        }
+        public abstract uint Count { get; set; }
+        public abstract string Name { get; set; }
+        public abstract decimal Price { get; set; }
         public abstract double Weight { get; }
-
-        public abstract void Buy();
-
-        public abstract decimal Sale();
-
-       
+        public abstract DayOfWeek DayOfWeek { get ; set; }
+        public abstract uint CountIsByu { get ; set ; }
     }
 }
